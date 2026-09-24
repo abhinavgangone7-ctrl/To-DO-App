@@ -1,0 +1,157 @@
+/* Palette Definition from User's Image */
+:root {
+  --color-dark-blue: #2373F4;     /* Button, focus borders */
+  --color-medium-blue: #578EF5;   /* Headings, hover state */
+  --color-light-cyan: #65D0F4;    /* App container background */
+  --color-pastel-yellow: #F2F7A0; /* Light body background */
+  --text-dark: #0f172a;
+}
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-pastel-yellow);
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  background-color: var(--color-light-cyan);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--color-dark-blue);
+}
+
+/* Input Group Styles */
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-medium-blue);
+  background-color: #ffffff;
+  color: var(--text-dark);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+#taskInput:focus {
+  border-color: var(--color-dark-blue);
+}
+
+#addBtn {
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-dark-blue);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#addBtn:hover {
+  background-color: var(--color-medium-blue);
+}
+
+/* Task List Styles */
+.task-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-item {
+  background-color: #ffffff;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--color-dark-blue);
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  word-break: break-word;
+  gap: 0.75rem;
+}
+
+/* Checkbox alignment and accent color */
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #25d325;
+  cursor: pointer;
+}
+
+/* Task Text & Strikethrough */
+.task-text {
+  flex: 1;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: #64748b;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+  background-color: #fee2e2;
+}
+
+/* Inline Edit Input */
+.edit-input {
+  flex: 1;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: 2px solid var(--color-dark-blue);
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  background-color: #ffffff;
+  color: var(--text-dark);
+}
+

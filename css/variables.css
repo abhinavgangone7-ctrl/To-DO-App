@@ -1,0 +1,8 @@
+/* Palette Definition from User's Image */
+:root {
+  --color-dark-blue: #2373F4;     /* Button, focus borders */
+  --color-medium-blue: #578EF5;   /* Headings, hover state */
+  --color-light-cyan: #65D0F4;    /* App container background */
+  --color-pastel-yellow: #F2F7A0; /* Light body background */
+  --text-dark: #0f172a;
+}

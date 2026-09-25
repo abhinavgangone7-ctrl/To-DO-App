@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To-Do App</title>
-  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Smart Task Matrix - To-Do App</title>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Modular CSS Stylesheets -->
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
 </head>
 <body>
   <div class="app-container">
@@ -21,11 +31,12 @@
       </div>
     </div>
 
-    <!-- Step 1: Simple Task Input -->
+    <!-- Step 1: Bulk / Single Task Input -->
     <div class="input-group">
-      <input type="text" id="taskInput" placeholder="Enter a task..." />
-      <button id="addBtn">Add Task</button>
+      <textarea id="taskInput" rows="1" placeholder="Enter task or paste multiple (separated by commas or lines)..."></textarea>
+      <button id="addBtn">+ Add Task</button>
     </div>
+    <p class="input-hint">💡 Tip: Separate items with commas or newlines to add multiple tasks</p>
 
     <!-- Step 2: Task List Container -->
     <ul id="taskList" class="task-list"></ul>

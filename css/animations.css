@@ -1,0 +1,47 @@
+/* Celebration Ribbon / Confetti Effect */
+.confetti-ribbon {
+  position: fixed;
+  top: -20px;
+  z-index: 9999;
+  pointer-events: none;
+  border-radius: 4px;
+  animation: dropRibbon 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes dropRibbon {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Celebration Toast Banner */
+.celebration-toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background-color: var(--color-dark-blue);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 25px rgba(35, 115, 244, 0.4);
+  z-index: 10000;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+}
+
+.celebration-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
